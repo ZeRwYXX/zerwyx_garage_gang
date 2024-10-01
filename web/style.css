@@ -1,0 +1,254 @@
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 70%; 
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background-color: #f7f7f7; 
+    border: 1px solid #e0e0e0;
+}
+
+#vehicleList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    flex: 1;
+    overflow-y: auto;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.vehicle {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.2s, background-color 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    height: auto;
+}
+
+.vehicle:hover {
+    transform: translateY(-5px);
+    background-color: #f0f0f0;
+}
+
+.vehicle img {
+    max-width: 100%; 
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.vehicle span {
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.vehicle button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.vehicle button:hover {
+    background-color: #0056b3;
+}
+
+.close-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 16px;
+    align-self: center;
+}
+
+.close-button:hover {
+    background-color: #c82333;
+}
+
+#codePanel {
+    display: none; 
+    flex-direction: column;
+    gap: 15px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 600px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#accessCode {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+    max-width: 600px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+#accessCode:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    cursor: pointer;
+}
+
+.notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    z-index: 9999;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease;
+}
+
+.notification-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.notification.success {
+    border-left: 5px solid #28a745;
+}
+
+.notification.success .notification-icon {
+    color: #28a745;
+}
+
+.notification.error {
+    border-left: 5px solid #dc3545;
+}
+
+.notification.error .notification-icon {
+    color: #dc3545;
+}
+
+.notification.warning {
+    border-left: 5px solid #ffc107;
+}
+
+.notification.warning .notification-icon {
+    color: #ffc107;
+}
+
+.notification.info {
+    border-left: 5px solid #17a2b8;
+}
+
+.notification.info .notification-icon {
+    color: #17a2b8;
+}
+
+.notification-message {
+    flex: 1;
+}
+
+.notification.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+#codePanel .validate-button {
+    background-color: #28a745; 
+    color: white;
+    border: none;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+#codePanel .validate-button:hover {
+    background-color: #218838; 
+}
+
+#codePanel .validate-button:active {
+    background-color: #1e7e34; 
+}
+
+.close-button-x {
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-size: 20px; 
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    cursor: pointer;
+    transition: color 0.2s ease; 
+}
+
+.close-button-x:hover {
+    color: #dc3545; 
+}
